@@ -1,0 +1,17 @@
+<head>
+  <title>test-enrollment</title>
+</head>
+
+<body>
+  {{> loginButtons}}.
+  {{> hello}}
+</body>
+
+<template name="hello">
+  {{#if usersWithoutUsername}}
+    <div class="blink">Noooooo! Users without an username!</div>
+  {{/if}}
+  <h1>Enter an email of a friend to invite</h1>
+  <input type="text" class="email" />
+  <input type="button" value="Invite" class="invite" />
+</template>
